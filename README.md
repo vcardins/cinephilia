@@ -15,6 +15,7 @@ Your app should:
 1. The gallery should contain at least titles and ratings
 1. Pagination
 
+[Demo](https://cinephilia-tmdb.netlify.app/)
 
 # Principles and Design Decisions
 
