@@ -25,7 +25,7 @@ const rules = {
 	'@typescript-eslint/no-extraneous-class': 'off', // Forbids the use of classes as namespaces (no-unnecessary-class from TSLint)
 	'@typescript-eslint/no-for-in-array': 'off', // Disallow iterating over an array with a for-in loop (no-for-in-array from TSLint)
 	'@typescript-eslint/no-inferrable-types': 'off', // Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean. (no-inferrable-types from TSLint)
-	'@typescript-eslint/no-unused-vars': 'error',
+	'@typescript-eslint/no-unused-vars': 'warn',
 	'@typescript-eslint/no-misused-new': 'off', // Enforce valid definition of new and constructor. (no-misused-new from TSLint)
 	'@typescript-eslint/no-namespace': 'off', // Disallow the use of custom TypeScript modules and namespaces (no-namespace from TSLint)
 	'@typescript-eslint/no-non-null-assertion': 'off', // Disallows non-null assertions using the ! postfix operator (no-non-null-assertion from TSLint)
@@ -56,7 +56,7 @@ const rules = {
 	'no-console': ['warn', { 'allow': ['error'] }],
 	'no-constant-condition': 'off',
 	'no-control-regex': 'off',
-	'no-debugger': 'error',
+	'no-debugger': 'warn',
 	'no-dupe-args': 'error',
 	'no-dupe-keys': 'error',
 	'no-duplicate-case': 'error',
