@@ -40,9 +40,9 @@ const MovieRating = styled.div`
 `;
 
 export function MovieCard (props: IMovieInfo & { onClick: () => void }): React.ReactElement<any> {
-	const { id, title, poster_path, backdrop_path, vote_average, popularity, onClick } = props;
-	const poster = poster_path ?? backdrop_path
-		? getImageUrl(200, poster_path ?? backdrop_path)
+	const { id, title, posterPath, backdropPath, voteAverage, popularity, onClick } = props;
+	const poster = posterPath ?? backdropPath
+		? getImageUrl(200, posterPath ?? backdropPath)
 		: 'https://static.thenounproject.com/png/1174579-200.png';
 
 	return (
@@ -50,7 +50,7 @@ export function MovieCard (props: IMovieInfo & { onClick: () => void }): React.R
 			<MovieDetails>
 				<MovieTitle title={title}>{title}</MovieTitle>
 				<MovieRating>Popularity: {popularity}</MovieRating>
-				<MovieRating>Rating: {vote_average}</MovieRating>
+				<MovieRating>Rating: {voteAverage}</MovieRating>
 			</MovieDetails>
 		</MovieCardContainer>
 	);

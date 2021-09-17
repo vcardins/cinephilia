@@ -40,14 +40,26 @@ export const useMovieDiscover = () => {
 			const url = `${API_URL}${qs}&page=${page}&sort_by=vote_count.asc`;
 
 			setIsLoading(true);
-			const response = await useApi<IApiResponse<IMovieInfo>>(url);
+			const response = await useApi<IApiResponse<any>>(url);
 			setIsLoading(false);
 
 			if (response) {
+				const results = response.results.map((item) => ({
+					...item,
+					posterPath: item.poster_path,
+					releaseDate: item.release_date,
+					genreIds: item.genre_ids,
+					originalTitle: item.original_title,
+					originalLanguage: item.original_language,
+					backdropPath: item.backdrop_path,
+					voteCount: item.vote_count,
+					voteAverage: item.vote_average,
+				}));
+
 				setPagination((prevState) => ({
 					...prevState,
 					page,
-					results: response.results || [],
+					results,
 					totalItems: response.total_results,
 					totalPages: response.total_pages,
 				}));

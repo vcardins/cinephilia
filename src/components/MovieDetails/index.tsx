@@ -50,11 +50,11 @@ const MovieOverview = styled.div`
 `;
 
 export function MovieDetails (props: IMovieInfo): React.ReactElement<any> {
-	const { id, title, poster_path, backdrop_path, release_date, original_title, overview } = props; // popularity, vote_average,
-	const poster = poster_path ?? backdrop_path
-		? getImageUrl(400, poster_path ?? backdrop_path)
+	const { id, title, posterPath, backdropPath, releaseDate, originalTitle, overview } = props; // popularity, voteAverage,
+	const poster = posterPath ?? backdropPath
+		? getImageUrl(400, posterPath ?? backdropPath)
 		: 'https://static.thenounproject.com/png/1174579-200.png';
-	const year = release_date?.split('-')?.[0];
+	const year = releaseDate?.split('-')?.[0];
 
 	return (
 		<MovieDetailsContainer id={`movie-detail-${id}`}>
@@ -62,9 +62,9 @@ export function MovieDetails (props: IMovieInfo): React.ReactElement<any> {
 			<MovieInfo>
 				<MovieTitle title={title}>
 					<span>{title}</span>
-					<span title={release_date}>({year})</span>
+					<span title={releaseDate}>({year})</span>
 				</MovieTitle>
-				<span>Original title: {original_title}</span>
+				<span>Original title: {originalTitle}</span>
 				<MovieOverview>
 					<h2>Overview</h2>
 					<section>{overview}</section>
