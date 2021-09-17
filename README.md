@@ -6,7 +6,7 @@ _Note: The user can input a start date without an end date and vice and versa._
 
 You’ll also need the documentation about the [Discover API](https://www.themoviedb.org/documentation/api/discover).
 
-In order to call the API, you will need an API key. You can either create an account in the database or use this provided API key: *050d0852e04ffcc82223c1bf04b7ae5c*
+In order to call the API, you will need an API key. You can either create an account in the database or use this provided API key: ????
 
 Your app should:
 
@@ -16,9 +16,20 @@ Your app should:
 1. Pagination
 
 
-# Design Decisions
+# Principles and Design Decisions
 
-1. We'll be using CSS Grid for making the app responsive
+1. ❤️ The code organization followed my personal coding style
+1. 🔥 The components were built with decoupling and separation of concerns in mind so, it'd be easy to customize and add new features
+1. 🚀 The layout and the responsiveness was designed mostly using CSS Grid
+1. 💪 All the code was built from scratch (avoided importing third party libs), based on my own experiences from previously developed apps (PS: The _useMountTransition_ hook was an exception).
+1. 💅 The look and feel could be much improved but I considered out of the scope of this assignment
+
+
+# Nices to have/To Do
+1. Write unit tests using Jest/enzyme or react-testing-library
+2. Write integration tests using Cypress
+3. Improve user experience with pre-loaders when loading data and images
+4. ...
 
 # Setup
 
