@@ -1,0 +1,27 @@
+import { IMovieDiscover } from '../types';
+
+export const availableFilters: IMovieDiscover[] = [
+	{ key: 'include_adult', label: 'Include adults', type: 'boolean' },
+	{ key: 'include_video', label: 'Include videos', type: 'boolean' },
+	{ key: 'language', label: 'Language', type: 'text' },
+	{ key: 'region', label: 'Region', type: 'text' },
+	{ key: 'certification_country', label: 'Certification Country', type: 'text' },
+	{ key: 'certification', isRange: true, label: 'Certification', type: 'text' },
+	{ key: 'primary_release_year', label: 'Primary Release Year', type: 'number' },
+	{ key: 'primary_release_date', isRange: true, label: 'Primary Release Date', type: 'date' },
+	{ key: 'release_date', isRange: true, label: 'Release Date', type: 'date', isActive: true },
+	{ key: 'year', label: 'Year', type: 'number' },
+	{ key: 'vote_count', isRange: true, label: 'Rating', type: 'number' },
+	{ key: 'vote_average', isRange: true, label: 'Avg. Rating', type: 'number' },
+	{ key: 'with_cast', label: 'With cast', type: 'text' },
+	{ key: 'with_crew', label: 'With crew', type: 'text' },
+	{ key: 'with_people', label: 'With people', type: 'text' },
+	{ key: 'with_companies', label: 'With companies', type: 'text' },
+	{ key: 'with_genres', label: 'With genres', type: 'text' },
+	{ key: 'with_keywords', label: 'With keywords', type: 'text' },
+	{ key: 'without_keywords', label: 'Without keywords', type: 'text' },
+	{ key: 'with_runtime', isRange: true, label: 'With Runtime', type: 'number' },
+	{ key: 'with_original_language', label: 'With original language', type: 'text' },
+	{ key: 'with_watch_providers', label: 'With watch providers', type: 'text' },
+	{ key: 'watch_region', label: 'Watch Region', type: 'text' },
+];
